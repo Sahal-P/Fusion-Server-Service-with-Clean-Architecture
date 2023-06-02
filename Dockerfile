@@ -12,6 +12,7 @@ COPY requirements.txt /app/
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
+RUN pip install twisted[http2,tls]
 
 # Copy the rest of the application code into the container at /app
 COPY . /app/
