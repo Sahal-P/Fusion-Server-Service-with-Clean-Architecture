@@ -3,14 +3,15 @@ import uuid
 
 # Generate a random UUID
 
+
 def consume_messages(topic):
     # Kafka consumer configuration
     random_id = uuid.uuid4()
     change = 1
     consumer_config = {
-        'bootstrap.servers': '10.108.217.194:9092',  # Kafka bootstrap servers
-        'group.id': f'{random_id}',     # Consumer group ID
-        'auto.offset.reset': 'earliest'      # Start consuming from the beginning of the topic
+        "bootstrap.servers": "10.108.217.194:9092",  # Kafka bootstrap servers
+        "group.id": f"{random_id}",  # Consumer group ID
+        "auto.offset.reset": "earliest",  # Start consuming from the beginning of the topic
     }
 
     # Create a Kafka consumer
@@ -29,11 +30,11 @@ def consume_messages(topic):
                 continue
 
             # Process the received message
-            print(f'Received message: {msg.value().decode()}')
+            print(f"Received message: {msg.value().decode()}")
 
     except KafkaException as e:
         # Handle Kafka exceptions
-        print(f'Kafka exception: {str(e)}')
+        print(f"Kafka exception: {str(e)}")
 
     finally:
         # Close the consumer to release its resources
