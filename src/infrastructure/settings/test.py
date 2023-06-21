@@ -8,13 +8,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = True
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'server_database',
-        'USER': 'postgres',
-        'PASSWORD': '09876',
-        'HOST': 'localhost',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "server_database",
+        "USER": "postgres",
+        "PASSWORD": "09876",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
-

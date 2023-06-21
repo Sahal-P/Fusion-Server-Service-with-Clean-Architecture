@@ -1,9 +1,10 @@
 from confluent_kafka import Producer
 
+
 def produce_message(topic, message):
     # Kafka producer configuration
     producer_config = {
-        'bootstrap.servers': 'kafka-srv:9092',  # Kafka bootstrap servers
+        "bootstrap.servers": "kafka-srv:9092",  # Kafka bootstrap servers
     }
 
     # Create a Kafka producer
@@ -16,4 +17,3 @@ def produce_message(topic, message):
     producer.flush()
 
     # Close the producer
-    

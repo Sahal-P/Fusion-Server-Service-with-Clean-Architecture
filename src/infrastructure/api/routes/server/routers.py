@@ -8,15 +8,13 @@ from src.infrastructure.factories.account import ServerViewSetFactory
 from src.interface.routes.server import server_router
 
 
-
 class ServerRouter(SimpleRouter):
-    
     routes = [
         Route(
-            url=server_router.get_url('create_server'),
-            mapping=server_router.map('create_server'),
-            initkwargs={'viewset_factory': ServerViewSetFactory},
-            name='{basename}-create',
-            detail=False
+            url=server_router.get_url("create_server"),
+            mapping=server_router.map("create_server"),
+            initkwargs={"viewset_factory": ServerViewSetFactory},
+            name="{basename}-create",
+            detail=False,
         )
     ]
